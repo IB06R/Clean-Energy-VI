@@ -469,9 +469,19 @@
     opacity: 0.6;
   }
   footer .wrap {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 860px) {
+  footer .wrap {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
   }
+}
 
   @media (max-width: 860px) {
     .hero .wrap { grid-template-columns: 1fr; }
@@ -571,13 +581,17 @@
     <div class="logo">
       <img src="cleanenergyVI.jpg" alt="Clean Energy VI">
     </div>
-    <!-- Removed the nav-toggle button -->
-    <ul class="nav-links">
-      <li><a href="#problem">The problem</a></li>
-      <li><a href="#solution">What we offer</a></li>
-      <li><a href="#how">How it works</a></li>
-      <li><a href="#contact" class="nav-cta">Contact us</a></li>
-    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-links">
+      <a href="#problem">The problem</a>
+      <a href="#solution">What we offer</a>
+      <a href="#how">How it works</a>
+      <a href="#contact" class="nav-cta">Contact us</a>
+    </div>
   </div>
 </nav>
 
@@ -740,12 +754,11 @@
   }
 </script>
 
-<footer>
-  <div class="wrap">
-    <div>Clean Energy VI</div>
-    <div>&copy; 2026 Clean Energy VI</div>
-  </div>
-</footer>
+<footer>  <div class="wrap">    
+  <div>Clean Energy VI</div>    
+  <div>&copy; 2026 Clean Energy VI</div>
+  <div> &nbsp;·&nbsp; Developed and Powered by Isaiah Ramontsho</div>  
+</div></footer>
 
 </body>
 </html>
